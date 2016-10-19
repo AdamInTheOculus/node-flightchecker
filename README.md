@@ -48,4 +48,5 @@ Carrier Name:   Air Transat
 Flight #:       360
 Cabin:          COACH
 Booking Code:   V
+-----------------------
 ```
