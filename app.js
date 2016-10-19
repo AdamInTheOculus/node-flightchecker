@@ -9,9 +9,12 @@
 // https://developers.google.com/qpx-express/v1/trips/search
 
 var https = require('https');
+var credentials = require('./credentials.js');
+
+console.log(credentials);
 
 // Google API Key
-var key = '';
+var key = credentials.key;
 
 // Trip Information
 var trip = {
@@ -55,6 +58,10 @@ var post_req = https.request(post_options, function(res) {
 
 	res.on('data', function(chunk) {
 		result += chunk;
+	});
+
+	res.on('error', function(err) {
+		console.log(err);
 	});
 
 	res.on('end', function() {
