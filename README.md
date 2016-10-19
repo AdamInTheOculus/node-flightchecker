@@ -1,5 +1,31 @@
 # How to get started
 - Fork this repo
-- Edit your `API Key` in app.js
+- Create a `credentials.js` file and place your Google API Key in there
 - Edit any flight parameters in `trip` object
-- Enter: ``` node app.js ``` in project directory
+- Enter: ``` node app.js ``` in console to run application
+
+## Current Example
+The current example checks for the cheapest flight:
+- FROM: Toronto
+- TO: Amsterdam
+- DEPARTURE: June 21 2017
+- ONE WAY
+
+### Request Body
+```json
+var post_body = JSON.stringify({
+  "request": {
+    "passengers": {
+      "adultCount": "1"
+    },
+    "slice": [
+      {
+        "origin": trip.origin,
+        "destination": trip.destination,
+        "date": trip.date
+      }
+    ],
+    "solutions": "1"
+  }
+});
+```
