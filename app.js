@@ -49,17 +49,15 @@ var post_body = JSON.stringify({
 // Set up the request
 var post_req = https.request(post_options, function(res) {
 
-	// Variable to hold response data
+	// When data is received, append to variable
 	var result = '';
+	res.on('data', function(chunk) {
+		result += chunk;
+	});
 
 	// Display any errors that occur
 	res.on('error', function(err) {
 		console.log(err);
-	});
-
-	// Append all data to variable
-	res.on('data', function(chunk) {
-		result += chunk;
 	});
 
 	// Convert data to JSON and display to console.
