@@ -31,14 +31,16 @@ var post_body = JSON.stringify({
 ```
 
 ### Formatted Results
-``` -----------------------
-Origin: 	Toronto Lester B Pearson - (YYZ)
-Destination: 	Amsterdam Schiphol Airport - (AMS)
+``` 
+-----------------------
+Origin: 	      Toronto Lester B Pearson - (YYZ)
+Destination: 	  Amsterdam Schiphol Airport - (AMS)
 Depart. Time:   2017-06-21T21:50-04:00
 Depart. Term:   3
 Arrival Time: 	2017-06-22T11:15+02:00
-Duration: 	445 minutes
+Duration: 	    445 minutes
 Aircraft Type: 	Airbus A330
 Carrier Name: 	Air Transat
-Sale Total: 	CAD472.16
------------------------ ```
+Sale Total: 	  CAD472.16
+----------------------- 
+```
